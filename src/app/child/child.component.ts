@@ -7,10 +7,13 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ChildComponent implements OnInit {
   @Input() childMessage: string;
-
+  name:string;
+  year:string;
   constructor() { }
 
   ngOnInit(): void {
+    this.name = this.car[0].name;
+    this.year = this.car[0].year;
   }
 
   add() {

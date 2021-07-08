@@ -9,7 +9,8 @@ import { ServiceService } from "../service.service";
 export class ParentComponent implements OnInit {
 
   car = [];
-
+  name:string;
+  year:string;
   constructor(
     private carValue: ServiceService
   ) { }
@@ -19,4 +20,8 @@ export class ParentComponent implements OnInit {
       .subscribe(res=> this.car = res);
   }
 
+  getBandValues():void{
+    this.name = this.car[0].name;
+    this.year = this.car[0].year;
+  }
 }
